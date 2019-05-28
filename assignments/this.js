@@ -41,3 +41,13 @@ console.log(chris.phrase());
 
 // Principle 4
 // code example for Explicit Binding
+
+function favMusic(genre1, genre2) {
+    this.genre1 = genre1;
+    this.genre2= genre2;
+    return `Chris's favorite genres are ${genre1} & ${genre2}`;
+}
+
+let favoriteGenres = ['Techno', 'Trance']
+
+console.log(favMusic.call(favoriteGenres,...favoriteGenres));
